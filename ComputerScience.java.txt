@@ -1,0 +1,85 @@
+/*********************************************************************
+Sub-Class ComputerScience
+
+Author : Jonathan Parrilla
+Course : COP 3804 MW 7:50 PM - 9:05PM
+Professor : Michael Robinson
+
+Program # : pgm2
+To implement classes using Inheritance
+
+Due Date : 10/03/2012
+Certification:
+I hereby certify that this work is my own and none of it is the work of any other person.
+..........{ your signature }..........
+
+
+
+*********************************************************************/
+import javax.swing.JOptionPane;
+
+public class ComputerScience extends University 
+{
+	//Global Private Variables
+	private static int mathCredits = 12; //overrides University mathCredits
+	
+	//Global Public Variables
+	public static int baseCredits = 30;
+	public static int coreCredits = 78;
+	public static int electives = 20;
+	
+	//Misc Methods
+	public static void p(Object stuff)
+	{
+		System.out.println(stuff);
+	}
+	
+	public static void pl()
+	{
+		System.out.println();
+	}
+	
+	public static void div()
+	{
+		p("--------------------------------------------------------");
+	}
+	
+	//GUI Method
+	public static void doMessageBox (Object message)
+	{
+		JOptionPane.showMessageDialog(null, message);
+	}
+	
+	
+
+	//Sub-Class Methods
+	public static void math() //overrides University math()
+	{
+		p("The Math Department requires " +mathCredits +" credits.");
+		doMessageBox("The Math Department requires " +mathCredits +" credits.");
+	}
+	
+	public static int getMathCredits() //overrides University getMathCredits()
+	{
+		return mathCredits;
+	}
+	
+	//Returns ComputerScience baseCredits
+	public static int getBaseCredits()
+	{
+		return baseCredits;
+	}
+	
+	//Returns ComputerScience coreCredits
+	public static int getCoreCredits()
+	{
+		return coreCredits;
+	}
+	
+	//Returns ComputerScience electives
+	public static int getElectives()
+	{
+		return electives;
+	}
+
+}

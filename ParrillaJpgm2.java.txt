@@ -1,0 +1,235 @@
+/*********************************************************************
+MAIN PROGRAM - Calling Program
+
+Author : Jonathan Parrilla
+Course : COP 3804 MW 7:50 PM - 9:05PM
+Professor : Michael Robinson
+
+Program # : pgm2
+To implement classes using Inheritance
+
+Due Date : 10/03/2012
+Certification:
+I hereby certify that this work is my own and none of it is the work of any other person.
+..........{ your signature }..........
+
+
+
+*********************************************************************/
+
+import javax.swing.JOptionPane;
+
+public class ParrillaJpgm2 
+{
+	//Main Program Global Variables
+	public int total = 0;
+	public int core = 0;
+	public int base = 0;
+	
+	//Misc Methods
+	public static void p(Object stuff)
+	{
+		System.out.println(stuff);
+	}
+	
+	public static void pl()
+	{
+		System.out.println();
+	}
+	
+	public static void div()
+	{
+		p("--------------------------------------------------------");
+	}
+	
+	//GUI Method
+	public static void doMessageBox (Object message)
+	{
+		JOptionPane.showMessageDialog(null, message);
+	}
+	
+	/*Methods to be called: 
+	* All methods use their own appropriately named Sub-class, 
+	* which also inherit methods from the Super-Class University.
+	*/
+	
+	//cs uses ComputerScience Sub-Class
+	public static void cs()
+	{
+		
+		//Print
+		p("Computer Science");
+		pl();
+		p("The Humanities Department requires " 				   				+ComputerScience.getHumanitiesCredits() + " credits.");
+		p("The Social Science Department requires " 								+ComputerScience.getSocialScienceCredits() + " credits.");
+		p("The English Department requires " 									+ComputerScience.getEnglishCredits() + " credits.");
+		p("The Math Department requires " +ComputerScience.getMathCredits() 
+			+ " credits.");
+		
+		pl();
+		
+		p("Total base Credits " +ComputerScience.getBaseCredits());
+		p("Total core Credits " +ComputerScience.getCoreCredits());
+		p("Total electives    " +ComputerScience.getElectives());
+		p("                  ====");
+		p("Total to graduate " +University.getTotalCreditsRequired());
+		
+		//Show via GUI
+		doMessageBox("Computer Science\n\n" 
+		        +"The Humanities Department requires " 						+ComputerScience.getHumanitiesCredits() + " credits.\n"
+				+"The Social Science Department requires " 					+ComputerScience.getSocialScienceCredits() + " credits.\n"
+				+"The English Department requires " 						+ComputerScience.getEnglishCredits() + " credits.\n"
+				+"The Math Department requires " 						+ComputerScience.getMathCredits() + " credits.\n"
+				+"\n"
+				+"Total base Credits  " +ComputerScience.getBaseCredits() 					+"\n"
+				+"Total core Credits   " +ComputerScience.getCoreCredits() 				+"\n"
+				+"Total electives         " 									+ComputerScience.getElectives() +"\n"
+				+"                              =====\n"
+				+"Total to graduate  " 										+University.getTotalCreditsRequired());
+		
+	}
+	
+
+
+
+
+
+
+
+	//it uses InformationTechnology Sub-Class
+	public static void it()
+	{
+		//Print
+		p("Information Technology");
+		pl();
+		p("The Humanities Department requires " 								+InformationTechnology.getHumanitiesCredits() + " credits.");
+		p("The Social Science Department requires " 								+InformationTechnology.getSocialScienceCredits() + " credits.");
+		p("The English Department requires " 									+InformationTechnology.getEnglishCredits() + " credits.");
+		p("The Math Department requires " 									+InformationTechnology.getMathCredits() + " credits.");
+		
+		pl();
+		
+		p("Total base Credits " +InformationTechnology.getBaseCredits());
+		p("Total core Credits " +InformationTechnology.getCoreCredits());
+		p("Total electives    " +InformationTechnology.getElectives());
+		p("                  ====");
+		p("Total to graduate " +University.getTotalCreditsRequired());
+		
+		//Show via GUI
+		doMessageBox("Information Technology\n\n" 
+		+"The Humanities Department requires " 									+InformationTechnology.getHumanitiesCredits() + " credits.\n"
+		+"The Social Science Department requires " 								+InformationTechnology.getSocialScienceCredits() + " credits.\n"
+		+"The English Department requires " 									+InformationTechnology.getEnglishCredits() + " credits.\n"
+		+"The Math Department requires " 									+InformationTechnology.getMathCredits() + " credits.\n"
+		+"\n"
+		+"Total base Credits  " 											+InformationTechnology.getBaseCredits() +"\n"
+		+"Total core Credits   " 											+InformationTechnology.getCoreCredits() +"\n"
+		+"Total electives         " 										+InformationTechnology.getElectives() +"\n"
+		+"                              =====\n"
+		+"Total to graduate  " 								+University.getTotalCreditsRequired());
+		
+	}
+	
+	//tn uses NetworkingAndTeleCommunications Sub-Class
+	public static void tn()
+	{
+		//Print
+		p("Telecommunications and Networking");
+		pl();
+		p("The Humanities Department requires " 								+NetworkingAndTeleCommunications.getHumanitiesCredits() 
+			+ " credits.");
+		p("The Social Science Department requires " 								+NetworkingAndTeleCommunications.getSocialScienceCredits() 
+			+ " credits.");
+		p("The English Department requires " 									+NetworkingAndTeleCommunications.getEnglishCredits() 
+			+ " credits.");
+		p("The Math Department requires " 									+NetworkingAndTeleCommunications.getMathCredits() + " credits.");
+		
+		pl();
+		
+		p("Total base Credits " 											+NetworkingAndTeleCommunications.getBaseCredits());
+		p("Total core Credits " 											+NetworkingAndTeleCommunications.getCoreCredits());
+		p("Total electives    " 											+NetworkingAndTeleCommunications.getElectives());
+		p("                  ====");
+		p("Total to graduate " +University.getTotalCreditsRequired());
+		
+		//Show via GUI
+		doMessageBox("Telecommunications and Networking\n\n" 
+		+"The Humanities Department requires " 									+NetworkingAndTeleCommunications.getHumanitiesCredits() 
+			+ " credits.\n"
+		+"The Social Science Department requires " 								+NetworkingAndTeleCommunications.getSocialScienceCredits() 
+		+ " credits.\n"
+		+"The English Department requires " 									+NetworkingAndTeleCommunications.getEnglishCredits() 
+			+ " credits.\n"
+		+"The Math Department requires " 									+NetworkingAndTeleCommunications.getMathCredits() + " credits.\n"
+		+"\n"
+		+"Total base Credits  " 											+NetworkingAndTeleCommunications.getBaseCredits() +"\n"
+		+"Total core Credits   " 											+NetworkingAndTeleCommunications.getCoreCredits() +"\n"
+		+"Total electives         " 										+NetworkingAndTeleCommunications.getElectives() +"\n"
+		+"                              =====\n"
+		+"Total to graduate  " 											+University.getTotalCreditsRequired());
+	}
+	
+
+
+
+
+
+
+
+
+
+
+	//Main Method
+	public static void main(String arg[])
+	{
+		//cs Method called
+		cs();
+		
+		//Divider Method called
+		div();
+		
+		//it Method called
+		it();
+		
+		//Divider Method called
+		div();
+		
+		//tn Method called
+		tn();
+		
+		//Divider Method called
+		div();
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

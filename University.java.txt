@@ -1,0 +1,108 @@
+/*********************************************************************
+Super-Class University
+
+Author : Jonathan Parrilla
+Course : COP 3804 MW 7:50 PM - 9:05PM
+Professor : Michael Robinson
+
+Program # : pgm2
+To implement classes using Inheritance
+
+Due Date : 10/03/2012
+Certification:
+I hereby certify that this work is my own and none of it is the work of any other person.
+..........{ your signature }..........
+
+
+
+*********************************************************************/
+import javax.swing.JOptionPane;
+
+public class University 
+{
+	//Misc Methods
+	public static void p(Object stuff)
+	{
+		System.out.println(stuff);
+	}
+	
+	public static void pl()
+	{
+		System.out.println();
+	}
+	
+	public static void div()
+	{
+		p("--------------------------------------------------------");
+	}
+	
+	//GUI Method
+	public static void doMessageBox (Object message)
+	{
+		JOptionPane.showMessageDialog(null, message);
+	}
+	
+	//Global Private Variables
+	private static int humanitiesCredits = 6;
+	private static int socialScienceCredits = 6;
+	private static int englishCredits = 6;
+	private static int mathCredits = 6;
+	private static int totalCreditsRequired = 128;
+	
+	
+
+
+	//Super-Class Methods - Print the amount of credits required
+	public static void humanities()
+	{
+		p("The Humanities Department requires " +humanitiesCredits 
+			+" credits.");
+		doMessageBox("The Humanities Department requires " +humanitiesCredits 
+				+" credits.");
+	}
+	
+	public static void socialScience()
+	{
+		p("The Social Science Department requires " +socialScienceCredits 
+			+" credits.");
+		doMessageBox("The Social Science Department requires " 							+socialScienceCredits +" credits.");
+	}
+	
+	public static void english()
+	{
+		p("The English Department requires " +englishCredits +" credits.");
+		doMessageBox("The English Department requires " +englishCredits 
+				+" credits.");
+	}
+	
+	public static void math()
+	{
+		p("The Math Department requires " +mathCredits +" credits.");
+		doMessageBox("The Math Department requires " +mathCredits +" credits.");
+	}
+	//Super-Class Getters - return the amount of credits required
+	public static int getHumanitiesCredits()
+	{
+		return humanitiesCredits;
+	}
+	
+	public static int getSocialScienceCredits()
+	{
+		return socialScienceCredits;
+	}
+	
+	public static int getEnglishCredits()
+	{
+		return englishCredits;
+	}
+	
+	public static int getMathCredits()
+	{
+		return mathCredits;
+	}
+	
+	public static int getTotalCreditsRequired()
+	{
+		return totalCreditsRequired;
+	}
+}
